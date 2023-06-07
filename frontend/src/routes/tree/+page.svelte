@@ -147,6 +147,8 @@
 
   const changeJewel = () => {
     selectedStats = {};
+    selectedConqueror = undefined;
+    seed = undefined;
     updateUrl();
   };
 
