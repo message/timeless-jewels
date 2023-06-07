@@ -303,9 +303,14 @@
         }
       }
 
-      if (highlighted.indexOf(node.skill) >= 0 || (highlightJewels && node.isJewelSocket)) {
-        context.strokeStyle = `hsl(${$slowTime}, 100%, 50%)`;
-        context.lineWidth = 3;
+      if (
+          highlighted.indexOf(node.skill) >= 0 ||
+          node.isJewelSocket &&
+          node.skill != circledNode &&
+          distance(rotatedPos, circledNodePos) > jewelRadius
+      ) {
+        context.strokeStyle = highlightJewels ? `hsl(${$slowTime}, 100%, 50%)` : `hsl(50, 50%, 50%)`
+        context.lineWidth = 2;
         context.beginPath();
         context.arc(rotatedPos.x, rotatedPos.y, (touchDistance + 30) / scaling, 0, Math.PI * 2);
         context.stroke();
