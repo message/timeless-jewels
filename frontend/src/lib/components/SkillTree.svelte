@@ -39,8 +39,8 @@
 
   const startGroups = [427, 320, 226, 227, 323, 422, 329];
 
-  const titleFont = '25px Roboto Mono';
-  const statsFont = '17px Roboto Mono';
+  const titleFont = '25px FontinBold';
+  const statsFont = '17px FontinRegular';
 
   let scaling = 10;
 
@@ -388,7 +388,7 @@
       context.font = titleFont;
       const textMetrics = context.measureText(nodeName);
 
-      const maxWidth = Math.max(textMetrics.width + 50, 600);
+      const maxWidth = Math.max(textMetrics.width + 50, 400);
 
       context.font = statsFont;
 
@@ -436,10 +436,10 @@
 
       const titleHeight = 55;
 
-      context.fillStyle = 'rgba(75,63,24,0.9)';
+      context.fillStyle = 'rgba(41,31,23,0.95)';
       context.fillRect(mousePos.x, mousePos.y, maxWidth, titleHeight);
 
-      context.fillStyle = '#ffffff';
+      context.fillStyle = '#f9e6ca';
       context.font = titleFont;
       context.textAlign = 'center';
       context.fillText(nodeName, mousePos.x + maxWidth / 2, mousePos.y + 35);
@@ -451,9 +451,9 @@
       context.textAlign = 'left';
       allLines.forEach((l) => {
         if (l.special) {
-          context.fillStyle = '#8cf34c';
+          context.fillStyle = '#ff7';
         } else {
-          context.fillStyle = '#ffffff';
+          context.fillStyle = '#88f';
         }
 
         context.fillText(l.text, mousePos.x + padding / 2, mousePos.y + l.offset);
@@ -468,7 +468,7 @@
 
     context.fillStyle = '#ffffff';
     context.textAlign = 'right';
-    context.font = '12px Roboto Mono';
+    context.font = '12px FontinSmallCaps';
 
     const end = window.performance.now();
 
