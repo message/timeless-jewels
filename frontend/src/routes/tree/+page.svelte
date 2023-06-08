@@ -395,7 +395,12 @@
     }
 
     const paste = (event.clipboardData || window.clipboardData).getData('text');
-    const lines = paste.replaceAll(/(^(\r\n|\n|\r)$)|(^(\r\n|\n|\r))|^\s*$/gm, '').split('\n');
+    const lines = paste.split('\n').reduce((acc, line) => {
+      if (line.trim().length > 0) {
+        acc.push(line.trim());
+      }
+      return acc;
+    }, [] as string[]);
 
     if (lines.length < 14) {
       return;
