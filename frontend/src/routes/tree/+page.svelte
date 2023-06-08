@@ -97,9 +97,14 @@
     updateUrl();
   };
 
+  let highlighted: number[] = [];
+
   let disabled = new Set();
   const clickNode = (node: Node) => {
     if (node.isJewelSocket) {
+      if (circledNode && circledNode != node.skill) {
+        highlighted = [];
+      }
       circledNode = node.skill;
       updateUrl();
     } else if (!node.isMastery) {
@@ -193,7 +198,6 @@
       });
   };
 
-  let highlighted: number[] = [];
   const highlight = (newSeed: number, passives: number[]) => {
     seed = newSeed;
     highlighted = passives;
