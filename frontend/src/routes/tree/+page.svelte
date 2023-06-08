@@ -250,6 +250,7 @@
   export const colorKeys = {
     physical: '#e1b900',
     cast: '#d800ff',
+    spell: '#d800ff',
     fire: '#FF0000',
     burning: '#FF0000',
     ignite: '#FF0000',
