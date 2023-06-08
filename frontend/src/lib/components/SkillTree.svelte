@@ -303,8 +303,8 @@
         }
       }
 
-      let hasHighlightedNodes = highlighted.indexOf(node.skill) >= 0;
-      let unselectedJewelNode = node.isJewelSocket && node.skill != circledNode;
+      const hasHighlightedNodes = highlighted.indexOf(node.skill) >= 0;
+      const unselectedJewelNode = node.isJewelSocket && node.skill != circledNode;
       if (
         hasHighlightedNodes ||
         (unselectedJewelNode && !(circledNode && distance(rotatedPos, circledNodePos) < jewelRadius))
