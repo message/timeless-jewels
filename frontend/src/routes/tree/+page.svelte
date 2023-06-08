@@ -244,23 +244,34 @@
   };
 
   export const colorKeys = {
-    physical: '#c79d93',
-    cast: '#b3f8fe',
-    fire: '#ff9a77',
-    cold: '#93d8ff',
-    lightning: '#f8cb76',
-    attack: '#da814d',
-    life: '#c96e6e',
-    chaos: '#d8a7d3',
+    physical: '#e1b900',
+    cast: '#d800ff',
+    fire: '#FF0000',
+    burning: '#FF0000',
+    ignite: '#FF0000',
+    cold: '#5599FF',
+    chill: '#5599FF',
+    lightning: '#FFF000',
+    shock: '#FFF000',
+    minion: '#ffc4e4',
+    ailment: '#00e120',
+    attack: '#ff9000',
+    life: '#ff00cc',
+    chaos: '#a944ff',
+    poison: '#a944ff',
     unique: '#af6025',
-    critical: '#b2a7d6'
+    intelligence: '#ccff00',
+    dexterity: '#ccff00',
+    strength: '#ccff00',
+    critical: '#a8ff00',
+    speed: '#00ffc0'
   };
 
   const colorMessage = (message: string): string => {
     Object.keys(colorKeys).forEach((key) => {
       const value = colorKeys[key];
       message = message.replace(
-        new RegExp(`(${key}(?:$|\\s))|((?:^|\\s)${key})`, 'gi'),
+        new RegExp(`(${key}(?:$|\\s|.*?\\b))|((?:^|\\s)${key}(?:.*?\\b))`, 'gi'),
         `<span style='color: ${value}; font-weight: bold'>$1$2</span>`
       );
     });
