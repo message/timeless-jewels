@@ -5,7 +5,7 @@ export const statValues = {
   49: 1, // #% increased Cold Damage
   56: 1, // #% increased Lightning Damage
   63: 1, // #% increased Chaos Damage
-  70: 2, // #% increased Attack Speed
+  70: 3, // #% increased Attack Speed
   95: 4, // +#% to Critical Strike Multiplier
   117: 1, // #% increased Armour
   124: 4, // #% increased maximum Life
@@ -33,6 +33,7 @@ export const statValues = {
   3110: 4, // #% of Cold Damage Leeched as Life
   3111: 4, // #% of Lightning Damage Leeched as Life
   5815: 4, // #% chance to deal Double Damage
+  5808: 4, // #% chance to deal Double Damage
   8835: 1, // #% of Spell Damage Leeched as Energy Shield
   9091: 1, // Bleeding you inflict deals Damage #% faster
   9772: 1, // #% chance to inflict Withered for 2 seconds on Hit
@@ -40,8 +41,10 @@ export const statValues = {
   209: 1, // #% increased Burning Damage
   447: 1, // Gain #% of Physical Damage as Extra Fire Damage
   573: 2, // +# to Strength
-  1294: 1, // +#% to Melee Critical Strike Multiplier
+  1293: 3, // +#% to Melee Critical Strike Multiplier
+  1294: 3, // +#% to Melee Critical Strike Multiplier
   1361: 1, // #% increased Melee Damage
+  2029: 5, // #% increased Strength
   2031: 5, // #% increased Strength
   8177: 2, // #% chance to Intimidate Enemies for 4 seconds on Hit
   448: 2, // Gain #% of Physical Damage as Extra Cold Damage
